@@ -1,6 +1,6 @@
 ## **NGINX-FLASK-DOCKER**
 
->NOTEN: Nginx loadbalancer
+>NOTE: Nginx loadbalancer
 
 Configure a nginx server as **loadbalancer** using a two _flask app_ running in the _**same** port_ or running each one from _**different** ports_.
 
