@@ -1,0 +1,35 @@
+version: "3.7"
+
+services:
+    web1:
+      build: .
+      expose:
+        - 5000
+      networks:
+        - internal_network
+    web2:
+      build: .
+      expose:
+        - 5000
+      networks:
+        - internal_network
+    nginx:
+      image: nginx
+      depends_on:
+        - web1
+        - web2
+      volumes:
+        - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      ports:
+        - 8080:80
+      networks:
+        - internal_network
+        - external_network
+
+networks:
+  external_network:
+    name: external_network
+
+  internal_network:
+    external: false
+    name: internal_network

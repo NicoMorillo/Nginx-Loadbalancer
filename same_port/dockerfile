@@ -1,0 +1,10 @@
+FROM python:latest
+
+RUN mkdir web
+WORKDIR web/
+COPY web web
+RUN pip install Flask
+
+EXPOSE 5000
+
+CMD ["python3","web/web1.py"]
