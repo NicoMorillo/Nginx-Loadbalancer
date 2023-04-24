@@ -6,7 +6,8 @@ Configure a nginx server as **loadbalancer** using a two _flask app_ running in 
 
 **Different ports**
 
-- In **differents_ports** folder run: 
+- In **differents_ports** folder run:
+
   ``` cd differents_ports```    
     ``` docker-compose up -d ```
 
@@ -14,7 +15,8 @@ Configure a nginx server as **loadbalancer** using a two _flask app_ running in 
 
 **Same port**
 
-- In **same_port** folder run: 
+- In **same_port** folder run:
+
     ``` cd same_port```    
     ``` docker-compose up -d ```
 - Test: ```curl localhost:8080```
